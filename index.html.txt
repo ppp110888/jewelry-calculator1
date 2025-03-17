@@ -1,0 +1,30 @@
+<div class="calculator">
+  <!-- 黄金参数 -->
+  <div class="input-group">
+    <label>主体金重 (克)</label>
+    <input type="number" id="mainGold" step="0.1">
+  </div>
+  
+  <!-- 主石参数 -->
+  <div class="stone-range">
+    <select id="stoneRange">
+      <option value="auto">自动分级</option>
+      <option value="custom">自定义单价</option>
+    </select>
+    <input type="number" id="customPrice" placeholder="输入单价" disabled>
+  </div>
+
+  <!-- 费用清单 -->
+  <div class="cost-list">
+    <div class="cost-item">
+      <span>副石镶工</span>
+      <span>5 元/粒</span>
+    </div>
+    <!-- 其他费用项... -->
+  </div>
+
+  <!-- 计算结果 -->
+  <div class="total">
+    总成本：<span id="totalCost">0.00</span> 元
+  </div>
+</div>
