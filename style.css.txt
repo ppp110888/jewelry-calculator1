@@ -1,0 +1,27 @@
+// 主石价格计算器
+function getStonePrice(weight, customPrice){
+  if(weight < 5) return 3800;
+  if(weight < 8) return 3600;
+  if(weight < 13) return 3600;
+  if(weight < 18) return 3200;
+  return customPrice || 0;
+}
+
+// 总成本计算
+function calculate(){
+  // 黄金成本
+  const goldCost = (mainGold + auxGold) * goldPrice * 1.15;
+  
+  // 主石成本
+  const mainStone = stoneWeight * getStonePrice(stoneWeight, customPrice) 
+                  + stoneCount * stoneSetting;
+  
+  // 副石成本
+  const auxStone = auxCount * 5; // 固定5元/粒
+  
+  // 其他费用
+  const others = labor + mold + supplement + wax + craft + other;
+  
+  // 总成本
+  total = goldCost + mainStone + auxStone + others;
+}
